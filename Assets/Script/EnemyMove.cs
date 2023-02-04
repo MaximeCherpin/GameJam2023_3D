@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float speed = 0.1f;
+    public float speed = 3f;
     public GameObject player;
     private Vector3 direction;
     private Vector3 movement;
@@ -21,7 +21,6 @@ public class EnemyMove : MonoBehaviour
         traveling_max = 2;
         pause_cd_max = 1;
         direction = player.transform.position - transform.position;
-        Debug.Log(globalMovement.speed);
         direction.y = globalMovement.speed;
         direction.z = 0;
     }
