@@ -8,27 +8,44 @@ public class EnemyMove : MonoBehaviour
     public GameObject player;
     private Vector3 direction;
     private Vector3 movement;
-    public float traveling_time;
-    public float traveling_cd;
+    private float pause_cd;
+    private float pause_cd_max;
+    private float traveling_max;
+    private float traveling;
+    private bool ismoving;
+    public GlobalMovement globalMovement;
 
     void Start()
     {
-        traveling_time = 1;
-        traveling_cd = 2;
+        ismoving = true;
+        traveling_max = 2;
+        pause_cd_max = 1;
         direction = player.transform.position - transform.position;
-        direction.y = 0;
+        Debug.Log(globalMovement.speed);
+        direction.y = globalMovement.speed;
         direction.z = 0;
     }
 
     void Update()
     {
-        if (traveling_time != 0) {
-            movement = direction * speed * Time.deltaTime;
+
+        if (ismoving) {
+            movement.x = direction.x * speed * Time.deltaTime;
+            movement.y = direction.y * Time.deltaTime;
             transform.position += movement;
-            traveling_time--;
         }
-        else {
-            
+        traveling += Time.deltaTime;
+        // if (traveling >= traveling_max) {
+        //     Debug.Log("stop moving");
+        //     ismoving = false;
+        // }
+        if (!ismoving) {
+            pause_cd += Time.deltaTime;
+            if (pause_cd >= pause_cd_max) {
+                ismoving = true;
+                pause_cd = 0;
+                traveling = 0;
+            }
         }
     }
 }
