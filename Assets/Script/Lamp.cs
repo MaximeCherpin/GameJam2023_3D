@@ -15,5 +15,7 @@ public class Lamp : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(_startingPosition.x, _startingPosition.y + Time.time * incrementSpeed, _startingPosition.z);
+        if (_startingPosition.y+ Time.time * incrementSpeed >= 20)
+            Destroy(gameObject);
     }
 }
