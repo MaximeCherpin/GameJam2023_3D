@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2778702747247556780}
   - component: {fileID: 2778702747247556781}
   - component: {fileID: 2778702747247556778}
-  - component: {fileID: 2778702747247556769}
   m_Layer: 0
   m_Name: Ink
   m_TagString: Untagged
@@ -112,16 +111,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3be69cee40f2bd4ba81e8ba11d503a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2778702747247556769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2778702747247556779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 020dc760c89bf9344bfd31565f5bbb0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalMovement: {fileID: 8647686453178983065, guid: daa1ee8066abab5498db9a5e01248406, type: 3}
