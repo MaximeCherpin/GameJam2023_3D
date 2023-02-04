@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollision : MonoBehaviour
+public class InkDeadAlive : MonoBehaviour
 {
+    public float alive_max;
+    private float alive; 
     // Start is called before the first frame update
     void Start()
     {
@@ -13,15 +15,9 @@ public class EnemyCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player")
-        {
-            other.gameObject.GetComponent<PlayerHealth>().health -= 15;
+        alive += Time.deltaTime;
+        if (alive >= alive_max) {
             Destroy(gameObject);
-            //decrease scale
         }
-
     }
 }
