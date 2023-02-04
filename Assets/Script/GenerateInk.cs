@@ -28,7 +28,7 @@ public class GenerateInk : MonoBehaviour
             spawn_cd = 0;
             float x = Random.Range(min_x, max_x);
             float y = transform.position.y + Random.Range(min_y, max_y);;
-            Vector3 pos = new Vector3(x, y, -0.1f);
+            Vector3 pos = new Vector3(x, y, 0);
             Quaternion rotation = Quaternion.Euler(90f, 0f, 0f);
             Instantiate(Ink, pos, rotation);
         }
