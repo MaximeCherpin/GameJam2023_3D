@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 542884087}
   - component: {fileID: 542884086}
   - component: {fileID: 542884090}
+  - component: {fileID: 542884091}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -525,6 +526,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   incrementSpeed: 0.19
+--- !u!114 &542884091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542884085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8defe3a48bd8e4f3cb184a1733163727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &926700513
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +571,7 @@ Transform:
   m_Children:
   - {fileID: 1346203042}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &926700516
 MonoBehaviour:
@@ -651,6 +664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7530970cc31cae809ad2777a662750e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  precedent: {fileID: 542884091}
+  parchemin: {fileID: 542884091}
+  cam: {fileID: 21872542}
 --- !u!1 &1346203041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2778702747247556782, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2778702747247556782, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,7 +1391,7 @@ Transform:
   m_Children:
   - {fileID: 7094391132173140914}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.097}
 --- !u!114 &6789927903592204585
 MonoBehaviour:
