@@ -41,6 +41,12 @@ public class CharacterController : MonoBehaviour
 
         //Changement Gauche / Droite
         if (switchDirection != 0) DirectionSwitch();
+        
+        // Tracking Camera � faire
+        // if (playerCamera)
+        // {
+
+        // }
     }
 
     void FixedUpdate()
