@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_min: 1
-  speed_max: 3
+  speed_max: 2
   player: {fileID: 7784012929288673270, guid: ed6471d8c43ad1c4381835cb5dd9ac8e, type: 3}
   globalMovement: {fileID: 8647686453178983065, guid: daa1ee8066abab5498db9a5e01248406, type: 3}
 --- !u!114 &6175342270665072011
