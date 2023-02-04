@@ -41,12 +41,6 @@ public class CharacterController : MonoBehaviour
 
         //Changement Gauche / Droite
         if (switchDirection != 0) DirectionSwitch();
-        
-        // Tracking Camera à faire
-        if (playerCamera)
-        {
-
-        }
     }
 
     void FixedUpdate()
@@ -54,9 +48,9 @@ public class CharacterController : MonoBehaviour
         Bounds colliderBounds = mainCollider.bounds;
         float colliderRadius = mainCollider.size.x * 0.4f * Mathf.Abs(transform.localScale.x);
         Vector2 groundCheckPos = colliderBounds.min + new Vector3(colliderBounds.size.x * 0.5f, colliderRadius * 0.9f, 0);
-        // Vérification du grounded
+        // Vï¿½rification du grounded
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPos, colliderRadius);
-        // Vérification du ColliderCharacter par (true ou false)
+        // Vï¿½rification du ColliderCharacter par (true ou false)
         isGrounded = false;
         if (colliders.Length > 0)
         {
@@ -70,7 +64,7 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-        //Application de la velocité
+        //Application de la velocitï¿½
         rb2d.velocity = new Vector3((switchDirection) * maxSpeed * Time.deltaTime , rb2d.velocity.y);
 
 
