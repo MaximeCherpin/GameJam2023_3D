@@ -49,5 +49,8 @@ public class EnemyMove : MonoBehaviour
                 traveling = 0;
             }
         }
+        if (transform.position.x < -5 || transform.position.x > 5) {
+            Destroy(gameObject);
+        }
     }
 }
