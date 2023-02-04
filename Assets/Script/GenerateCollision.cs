@@ -25,7 +25,8 @@ public class GenerateCollision : MonoBehaviour
             float x = Random.Range(min_x, max_x);
             float y = transform.position.y;
             Vector3 pos = new Vector3(x, y, 0);
-            Instantiate(collision, pos, Quaternion.identity);
+            Quaternion rotation = Quaternion.Euler(90f, 0f, 0f);
+            Instantiate(collision, pos, rotation);
         }
     }
 }
