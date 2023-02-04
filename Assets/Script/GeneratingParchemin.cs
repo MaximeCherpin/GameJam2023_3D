@@ -17,8 +17,8 @@ public class GeneratingParchemin : MonoBehaviour
     void Update()
     {
         Vector3 precedentPos = precedent.transform.position;
-        Vector3 pos = new Vector3(precedentPos.x, precedentPos.y - 14, precedentPos.z);
-        if (precedentPos.y + 14 > cam.transform.position.y)
+        Vector3 pos = new Vector3(precedentPos.x, precedentPos.y - 15, precedentPos.z);
+        if (precedentPos.y > cam.transform.position.y)
         {
             precedent = Instantiate(parchemin, pos, precedent.transform.rotation);
         }
