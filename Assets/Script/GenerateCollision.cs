@@ -28,5 +28,6 @@ public class GenerateCollision : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0f, 0f, 0f);
             Instantiate(collision, pos, rotation);
         }
+        transform.position = new Vector3(0, transform.position.y, transform.position.z);
     }
 }
