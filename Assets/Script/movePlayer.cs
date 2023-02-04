@@ -30,7 +30,7 @@ public class movePlayer : MonoBehaviour
             if (player.transform.position.x >= 3.5)
                 player.transform.position = new Vector3(3.55f, player.transform.position.y, player.transform.position.z);
             if (player.transform.position.x <= -3.1)
-                player.transform.position = new Vector3(-3.1f, player.transform.position.y, player.transform.position.z);
+                player.transform.position = new Vector3(-3.05f, player.transform.position.y, player.transform.position.z);
         }
         
     }
