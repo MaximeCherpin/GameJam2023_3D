@@ -7,7 +7,7 @@ public class movePlayer : MonoBehaviour
 {
     public Player player;
     public float speed = 1f;
-
+    public PlayerHealth playerHealth;
     public Camera cam;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,6 @@ public class movePlayer : MonoBehaviour
             if (player.transform.position.x <= -3.1)
                 player.transform.position = new Vector3(-3.05f, player.transform.position.y, player.transform.position.z);
         }
-        
+    
     }
 }
