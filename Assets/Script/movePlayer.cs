@@ -22,9 +22,7 @@ public class movePlayer : MonoBehaviour
         Vector3 mousPosnotreal = Input.mousePosition;
         mousPosnotreal.z = 5.5f;
         Vector3 mousPos = cam.ScreenToWorldPoint(mousPosnotreal);
-        print(mousPos);
         float dir = (mousPos.x - player.transform.position.x);
-        print(dir);
         player.controller.Move(new Vector3(dir * speed, -player.speed/2, 0) * Time.deltaTime);
         if (!(player.transform.position.x <= 3.5 && player.transform.position.x >= -3.1)) {
             if (player.transform.position.x >= 3.5)
