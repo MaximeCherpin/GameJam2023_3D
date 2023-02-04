@@ -25,7 +25,8 @@ public class movePlayer : MonoBehaviour
         print(mousPos);
         float dir = (mousPos.x - player.transform.position.x);
         print(dir);
-        player.controller.Move(new Vector3(dir * speed, -player.speed/2, 0) * Time.deltaTime);
+        if (player.transform.position.x < 2.67 && player.transform.position.x > -2.31)
+            player.controller.Move(new Vector3(dir * speed, -player.speed/2, 0) * Time.deltaTime);
 
     }
 }
