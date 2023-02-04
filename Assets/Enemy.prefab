@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4433967419845174416}
   - component: {fileID: 4433967419845174417}
   - component: {fileID: 4433967419845174418}
+  - component: {fileID: -1245324004841174844}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -110,6 +111,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de150948a217cc4468393531b2802eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed_min: 1
+  speed_max: 3
   player: {fileID: 7784012929288673270, guid: ed6471d8c43ad1c4381835cb5dd9ac8e, type: 3}
   globalMovement: {fileID: 8647686453178983065, guid: daa1ee8066abab5498db9a5e01248406, type: 3}
+--- !u!114 &-1245324004841174844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433967419845174419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867fa80edc630cc42becb2159e69d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ink_dead: {fileID: 7988438229092944874, guid: 9ce82a56d4a724e4ba40895e13878e40, type: 3}
+  playerHealth: {fileID: 1692418389293226415, guid: ed3c897813a63254e9ed051f81dd4d9f, type: 3}

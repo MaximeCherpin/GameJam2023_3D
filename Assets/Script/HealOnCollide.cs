@@ -18,6 +18,7 @@ public class HealOnCollide : MonoBehaviour
         }
     }
     private void OnTriggerStay(Collider other) {
+        print(other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerHealth>().health += 10;
