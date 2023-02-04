@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     private float speed = 1f;
-    public float speed_min = 1f;
-    public float speed_max = 3f;
+    public float speed_min = 0.2f;
+    public float speed_max = 1f;
     public GameObject player;
     private Vector3 direction;
     private Vector3 movement;
@@ -15,6 +15,7 @@ public class EnemyMove : MonoBehaviour
     private float traveling_max;
     private float traveling;
     private bool ismoving;
+    private float alive_time = 0f;
     public GlobalMovement globalMovement;
 
     void Start()
@@ -23,9 +24,7 @@ public class EnemyMove : MonoBehaviour
         ismoving = true;
         traveling_max = 2;
         pause_cd_max = 1;
-        direction = player.transform.position - transform.position;
-        direction.y = globalMovement.speed;
-        direction.z = 0;
+        direction = player.transform.position - transform.position;        direction.z = 0;
     }
 
     void Update()
@@ -33,22 +32,25 @@ public class EnemyMove : MonoBehaviour
 
         if (ismoving) {
             movement.x = direction.x * speed * Time.deltaTime;
-            movement.y = direction.y * Time.deltaTime;
             transform.position += movement;
         }
+        alive_time += Time.deltaTime;
         traveling += Time.deltaTime;
         // if (traveling >= traveling_max) {
         //     Debug.Log("stop moving");
         //     ismoving = false;
         // }
-        if (!ismoving) {
-            pause_cd += Time.deltaTime;
-            if (pause_cd >= pause_cd_max) {
-                ismoving = true;
-                pause_cd = 0;
-                traveling = 0;
-            }
+        if (alive_time >= 4) {
+            Destroy(gameObject);
         }
+        // if (!ismoving) {
+        //     pause_cd += Time.deltaTime;
+        //     if (pause_cd >= pause_cd_max) {
+        //         ismoving = true;
+        //         pause_cd = 0;
+        //         traveling = 0;
+        //     }
+        // }
         if (transform.position.x < -5 || transform.position.x > 5) {
             Destroy(gameObject);
         }
