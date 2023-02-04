@@ -10,6 +10,8 @@ public class BlockMovement : MonoBehaviour
     private Vector3 movement;
     public float speed = 3f;
 
+    private float cd;
+
     void Start()
 {
         direction = player.transform.position - transform.position;
@@ -25,6 +27,10 @@ public class BlockMovement : MonoBehaviour
         movement.x = direction.x * speed * Time.deltaTime;
         movement.y = direction.y * Time.deltaTime;
         transform.position += movement;
+        cd += Time.deltaTime;
+        if (cd >= 2) {
+            Destroy(gameObject);
+        }
         if (transform.position.y >= 6) {
             Destroy(gameObject);
         }

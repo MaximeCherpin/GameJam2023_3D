@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class generateMap : MonoBehaviour
+public class InkIsAlive : MonoBehaviour
 {
+    private float alive = 0f;
     // Start is called before the first frame update
-
-    public GameObject parchemin;
-    public Camera cam;
     void Start()
     {
         
@@ -16,9 +14,9 @@ public class generateMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 position;
-        Quaternion rot;
-        // if ()
-        //     Instantiate(parchemin, position, rot);
+        alive += Time.deltaTime;
+        if (alive >= 2f) {
+            Destroy(gameObject);
+        }
     }
 }

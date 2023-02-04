@@ -14,6 +14,6 @@ public class InkMove : MonoBehaviour
     void Update()
     {
         movement = direction * Time.deltaTime;
-        transform.position += movement;
+        //transform.position += movement;
     }
 }
