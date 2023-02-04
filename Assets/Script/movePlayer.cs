@@ -24,6 +24,8 @@ public class movePlayer : MonoBehaviour
         Vector3 mousPos = cam.ScreenToWorldPoint(mousPosnotreal);
         float dir = (mousPos.x - player.transform.position.x);
         player.controller.Move(new Vector3(dir * speed, -player.speed/2, 0) * Time.deltaTime);
-
+        //goyome line 
+        transform.position = new Vector3(transform.position.x, transform.position.y, -0.01f);
+        //goyome end line
     }
 }
