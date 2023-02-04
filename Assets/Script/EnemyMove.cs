@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float speed = 3f;
+    private float speed = 1f;
+    public float speed_min = 1f;
+    public float speed_max = 3f;
     public GameObject player;
     private Vector3 direction;
     private Vector3 movement;
@@ -17,6 +19,7 @@ public class EnemyMove : MonoBehaviour
 
     void Start()
     {
+        speed = Random.Range(speed_min, speed_max);
         ismoving = true;
         traveling_max = 2;
         pause_cd_max = 1;
