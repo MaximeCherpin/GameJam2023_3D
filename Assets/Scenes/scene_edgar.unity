@@ -593,6 +593,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 926700515}
     m_Modifications:
     - target: {fileID: 7326331253618048354, guid: f596e86f345811f4f803a06714790423, type: 3}
@@ -664,6 +665,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f596e86f345811f4f803a06714790423, type: 3}
 --- !u!1 &542884085
 GameObject:
@@ -1212,6 +1216,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 926700515}
     m_Modifications:
     - target: {fileID: 7326331253618048354, guid: f596e86f345811f4f803a06714790423, type: 3}
@@ -1283,6 +1288,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f596e86f345811f4f803a06714790423, type: 3}
 --- !u!1 &1278556986
 GameObject:
@@ -1452,7 +1460,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: Infinity
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1462,16 +1470,34 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.30125427
-        inSlope: 0
-        outSlope: 0
+        value: 0.05857849
+        inSlope: 1.7732538
+        outSlope: 1.7732538
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.021443801
+      - serializedVersion: 3
+        time: 0.034250304
+        value: 0.14645386
+        inSlope: 0.7703189
+        outSlope: 0.7703189
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.37671927
+      - serializedVersion: 3
+        time: 0.49507326
+        value: 0.40368035
+        inSlope: 0.27840877
+        outSlope: 0.27840877
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.305439
+        value: 0.47699356
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1665,7 +1691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2778702747247556782, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2778702747247556782, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2051,7 +2077,7 @@ Transform:
   - {fileID: 1278556987}
   - {fileID: 7094391132173140914}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.097}
 --- !u!4 &7094391132173140914
 Transform:
