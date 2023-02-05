@@ -24,9 +24,10 @@ public class EnemyMove : MonoBehaviour
         ismoving = true;
         traveling_max = 2;
         pause_cd_max = 1;
-        direction = player.transform.position - transform.position;        direction.z = 0;
+        direction = player.transform.position - transform.position;
+        direction.z = 0;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
-
     void Update()
     {
 
@@ -40,7 +41,7 @@ public class EnemyMove : MonoBehaviour
         //     Debug.Log("stop moving");
         //     ismoving = false;
         // }
-        if (alive_time >= 4) {
+        if (alive_time >= 8) {
             Destroy(gameObject);
         }
         // if (!ismoving) {
