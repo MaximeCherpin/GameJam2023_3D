@@ -26,7 +26,6 @@ public class GenerateInk : MonoBehaviour
     void Update()
     {
         spawn_cd += Time.deltaTime;
-        print("test");
         if (spawn_cd >= spawn_cd_max) 
         {
             spawn_cd_max = Random.Range(spawn_cd_max1, spawn_cd_max2);

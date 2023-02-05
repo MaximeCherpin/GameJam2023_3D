@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 200;
-    public float maxHealth = 300;
+    public float health = 100;
+    public float maxHealth = 200;
     public bool isAlive = true;
 
     // Start is called before the first frame update
@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health > maxHealth)
+            health = maxHealth;
         if (isAlive)
             health -= .3f;
         if (health < 0)

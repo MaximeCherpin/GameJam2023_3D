@@ -9,8 +9,8 @@ public class ScreenShake : MonoBehaviour
     
     // Start is called before the first frame update
     public bool shaking = false;
-    public float shakeAmount = 0.7f;
-    public float decreaseFactor = 1.0f;
+    public float shakeAmount = 0f;
+    public float decreaseFactor = 0.05f;
     PostProcessVolume pp;
     private Grain myGrain;
 
