@@ -7,6 +7,7 @@ public class EnemyCollision : MonoBehaviour
     public GameObject ink_alive;
     public GameObject ink_alive2;
     public GameObject ink_alive3;
+    public ScreenShake screenShake;
 
     private int number = 0;
 
@@ -28,20 +29,19 @@ public class EnemyCollision : MonoBehaviour
         {
             Player player = other.gameObject.GetComponent<Player>();
             other.gameObject.GetComponent<PlayerHealth>().health -= 15;
-            print(number);
+            print("is dead!");
+            screenShake.shake = 0.8f;
+            print(screenShake.shake);
             if (number == 0)
             {
-                print('1');
                 Instantiate(ink_alive, transform.position, Quaternion.Euler(0f, 0f, 0f));
             }
             else if (number == 1)
             {
-                print('1');
                 Instantiate(ink_alive2, transform.position, Quaternion.Euler(0f, 0f, 0f));
             }
             else if (number == 2)
             {
-                print('2');
                 Instantiate(ink_alive3, transform.position, Quaternion.Euler(0f, 0f, 0f));
             }
             Destroy(gameObject);
