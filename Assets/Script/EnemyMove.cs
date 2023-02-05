@@ -68,7 +68,7 @@ public class EnemyMove : MonoBehaviour
         //     }
         // }
         if (transform.position.x < -5 || transform.position.x > 5) {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
