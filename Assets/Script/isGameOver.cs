@@ -8,7 +8,7 @@ public class isGameOver : MonoBehaviour
     // Start is called before the first frame update
     public CharacterController cam;
     public PlayerHealth health;
-    private Vector3 _initialPos = new Vector3(-0.3f, 1.51f, -5.5f);
+    private Vector3 _initialPos = new Vector3(-0.3f, 2.11f, -5.5f);
     public float speed = 0f;
     public float maxDist = 0f;
     private float _wait = 30f;
