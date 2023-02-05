@@ -22,7 +22,7 @@ public class HealOnCollide : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerHealth>().health += 10;
             //decrease scale
-            transform.localScale -= new Vector3(0.025f, 0f, 0.025f);
+            transform.localScale -= new Vector3(0.27f, 0f, 0.27f);
         }
         if (transform.localScale.x <= 0.1f)
         {
