@@ -27,6 +27,7 @@ public class EnemyCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player")
         {
+            Player player = other.gameObject.GetComponent<Player>();
             other.gameObject.GetComponent<PlayerHealth>().health -= 15;
             print("is dead!");
             ScreenShake.access.AddShake(0.8f);

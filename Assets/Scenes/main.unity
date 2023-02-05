@@ -574,14 +574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ad417b5d93355469844aa7091fbe30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ink: {fileID: 1349582786}
-  spawn_cd_max: 0
-  spawn_cd_max1: 4
-  spawn_cd_max2: 8
-  min_x: -2
-  max_x: 2
-  min_y: 0
-  max_y: 0
 --- !u!135 &362493793
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -691,6 +683,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &362493800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362493787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f61271555f356cd418278f2ee9b175fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ink: {fileID: 2778702747247556779, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
+  spawn_cd_max: 0
+  spawn_cd_max1: 4
+  spawn_cd_max2: 8
+  min_x: -2
+  max_x: 2
+  min_y: 0
+  max_y: 0
 --- !u!1 &386194855
 GameObject:
   m_ObjectHideFlags: 0
