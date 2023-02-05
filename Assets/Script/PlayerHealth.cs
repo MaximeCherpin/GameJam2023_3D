@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
-    public int maxHealth = 100;
+    public float health = 200;
+    public float maxHealth = 300;
+    public bool isAlive = true;
 
-    private float cd_max = 1f;
-
-    private float cd = 0f;
     // Start is called before the first frame update
 
     void Start()
@@ -20,19 +18,12 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cd += Time.deltaTime;
-        if (cd > cd_max)
+        if (isAlive)
+            health -= .3f;
+        if (health < 0)
         {
-            cd = 0f;
-            health-= 2;
+            isAlive = false;
         }
-        if (health >= 100)
-        {
-            health = 100;
-        }
-        // goyome's note : doesn't work as expected (health change the size of the root)s
-        //float scale = (float)health / (float)maxHealth;
-        //transform.localScale = new Vector3(scale, transform.localScale.y, transform.localScale.z);
-            
-        }
+
+    }
 }
