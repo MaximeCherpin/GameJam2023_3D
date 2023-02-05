@@ -5,7 +5,8 @@ using UnityEngine;
 public class checkStart : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Animator animator;
+    public GameObject to_destroy;
+    public GameObject to_anim;
     public Player player;
     void Start()
     {
@@ -17,8 +18,8 @@ public class checkStart : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            print("je lcique");
-            animator.SetBool("start", true);
+            to_destroy.SetActive(false);
+            to_anim.SetActive(true);
             player.start = true;
         }
     }
