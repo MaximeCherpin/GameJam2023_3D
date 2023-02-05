@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public float health = 100;
     public float maxHealth = 100;
     public bool isAlive = true;
+    public Player player;
 
     public float score = 0f;
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health > maxHealth)
             health = maxHealth;
-        if (isAlive)
+        if (isAlive && player.start)
         {
             health -= 6f * Time.deltaTime;
             score += 6f * Time.deltaTime;
