@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followPlayer : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
     public Player player;
     public float smoothSpeed = 0.125f;
@@ -12,9 +12,9 @@ public class followPlayer : MonoBehaviour
     {
         if (player.health.isAlive)
         {
-            Vector3 playePos = player.transform.position;
+            Vector3 playerPos = player.transform.position;
             if (player.transform.position.y - .5f <= transform.position.y)
-                transform.position = new Vector3(transform.position.x, playePos.y - .5f, transform.position.z);
+                transform.position = new Vector3(transform.position.x, playerPos.y - .5f, transform.position.z);
         }
     }
 }
