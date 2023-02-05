@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61271555f356cd418278f2ee9b175fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ink: {fileID: 1349582786}
+  Ink: {fileID: 2778702747247556779, guid: 66cbfe143e4d0fe40b8e767b9c3fe427, type: 3}
   spawn_cd_max: 0
   spawn_cd_max1: 4
   spawn_cd_max2: 8
