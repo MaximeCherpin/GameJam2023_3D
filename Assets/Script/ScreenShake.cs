@@ -1,35 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class ScreenShake : MonoBehaviour
 {
+    public static ScreenShake access;
+    
     // Start is called before the first frame update
-    public float shake = 0f;
-    public float shakeAmount = 0.7f;
+    public bool shaking = false;
+    public float shakeAmount = 0.3f;
     public float decreaseFactor = 1.0f;
-    public Camera cam;
-    void Start()
+    PostProcessVolume pp;
+    private Grain myGrain;
+
+    void Awake()
     {
+        access = this;
+        pp = GetComponentInChildren<PostProcessVolume>();
+        myGrain = pp.sharedProfile.GetSetting<Grain>();
+        myGrain.enabled.Override(true);
+        myGrain.intensity.Override(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // print(shake);
-        // if (shake > 0.1)
-        // {
-        //     print("make it shake");
+        if (shaking == false && shakeAmount > 0)
+            StartCoroutine(Shaking());
+    }
 
-        //     cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
-        //     cam.transform.localPosition.z = -5.5f;
-        //     cam.transform.localPosition.y = 1.30f;
-        //      shake -= Time.deltaTime * decreaseFactor;
-        // }
-        // else
-        // {
-        //     shake = 0f;
-        //     //cam.transform.localPosition = Vector3.zero;
-        // }
+    IEnumerator Shaking()
+    {
+        while (shakeAmount >= 0)
+        {
+            transform.localPosition = Random.insideUnitSphere * shakeAmount;
+            shakeAmount -= Time.deltaTime * decreaseFactor;
+            myGrain.intensity.Override(shakeAmount);
+            yield return null;
+        }
+        ResetCamera();
+    }
+
+    void ResetCamera()
+    {
+        transform.localPosition = Vector3.zero;
+        myGrain.intensity.Override(0);
+        shaking = false;
+    }
+
+public void AddShake(float amount)
+    {
+        if (amount > shakeAmount) shakeAmount = amount;
     }
 }
