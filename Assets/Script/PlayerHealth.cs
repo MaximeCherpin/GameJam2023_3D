@@ -31,6 +31,11 @@ public class PlayerHealth : MonoBehaviour
         {
             isAlive = false;
         }
+        // if mouse click and isAlive == false, then restart the game
+        if (Input.GetMouseButtonDown(0) && !isAlive)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
 
     }
 }
