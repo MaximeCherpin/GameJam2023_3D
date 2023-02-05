@@ -23,8 +23,6 @@ public class EnemyMove : MonoBehaviour
         right_to_left = Random.Range(0, 2) == 0;
         speed = Random.Range(speed_min, speed_max);
         ismoving = true;
-        traveling_max = 2;
-        pause_cd_max = 1;
         direction.z = 0;
     }
     void Update()
