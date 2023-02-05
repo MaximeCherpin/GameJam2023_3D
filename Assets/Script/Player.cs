@@ -6,8 +6,9 @@ public class Player : MonoBehaviour
 {
 
     public float speed = 1f;
-
     public CharacterController controller;
+    public PlayerHealth health;
+    public TrailRenderer trail;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        trail.widthMultiplier = (float)health.health / health.maxHealth;
     }
 }
