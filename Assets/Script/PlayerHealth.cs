@@ -30,10 +30,6 @@ public class PlayerHealth : MonoBehaviour
         {
             health = 100;
         }
-        if (health <= 0)
-        {
-            health = 0;
-        }
         // goyome's note : doesn't work as expected (health change the size of the root)s
         //float scale = (float)health / (float)maxHealth;
         //transform.localScale = new Vector3(scale, transform.localScale.y, transform.localScale.z);
