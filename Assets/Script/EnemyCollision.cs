@@ -29,8 +29,7 @@ public class EnemyCollision : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerHealth>().health -= 15;
             print("is dead!");
-            screenShake.shake = 0.8f;
-            print(screenShake.shake);
+            ScreenShake.access.AddShake(0.8f);
             if (number == 0)
             {
                 Instantiate(ink_alive, transform.position, Quaternion.Euler(0f, 0f, 0f));
