@@ -24,7 +24,19 @@ public class PlayerHealth : MonoBehaviour
         if (cd > cd_max)
         {
             cd = 0f;
-            health-= 15;
+            health-= 2;
         }
-    }
+        if (health >= 100)
+        {
+            health = 100;
+        }
+        if (health <= 0)
+        {
+            health = 0;
+        }
+        // goyome's note : doesn't work as expected (health change the size of the root)s
+        //float scale = (float)health / (float)maxHealth;
+        //transform.localScale = new Vector3(scale, transform.localScale.y, transform.localScale.z);
+            
+        }
 }

@@ -131,6 +131,7 @@ MonoBehaviour:
   ink_alive: {fileID: 4812636973216120147, guid: 174c567fc5829f24994ef88a70699979, type: 3}
   ink_alive2: {fileID: 2141808679310268172, guid: 6b01a56a1ca0f4c4f9c3920b37a3c62b, type: 3}
   ink_alive3: {fileID: 3050765100344770504, guid: c1d54a6de77917843a71dc8b4541c465, type: 3}
+  screenShake: {fileID: 3492247084618176753, guid: 065daac1dceef714aac03ebeb8f9be9e, type: 3}
 --- !u!1001 &3784715675972305996
 PrefabInstance:
   m_ObjectHideFlags: 0
