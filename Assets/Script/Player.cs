@@ -18,6 +18,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        trail.widthMultiplier = (float)health.health / health.maxHealth;
+        trail.widthMultiplier = 1.3f * health.health / health.maxHealth;
     }
 }

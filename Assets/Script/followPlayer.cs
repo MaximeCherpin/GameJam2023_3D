@@ -10,8 +10,11 @@ public class followPlayer : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 playePos = player.transform.position;
-        if (player.transform.position.y - .5f <= transform.position.y)
-            transform.position = new Vector3(transform.position.x, playePos.y - .5f, transform.position.z);
+        if (player.health.isAlive)
+        {
+            Vector3 playePos = player.transform.position;
+            if (player.transform.position.y - .5f <= transform.position.y)
+                transform.position = new Vector3(transform.position.x, playePos.y - .5f, transform.position.z);
+        }
     }
 }

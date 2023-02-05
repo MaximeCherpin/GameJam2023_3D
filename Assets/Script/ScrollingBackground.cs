@@ -7,6 +7,7 @@ public class ScrollingBackground : MonoBehaviour
     public float incrementSpeed = 0.1f;
     private Material _material;
     private Vector2 _startingOffset;
+    public PlayerHealth health;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class ScrollingBackground : MonoBehaviour
 
     void Update()
     {
-        _material.mainTextureOffset = new Vector2(_startingOffset.x, _startingOffset.y + Time.time * incrementSpeed);
+        if (health.isAlive)
+            _material.mainTextureOffset = new Vector2(_startingOffset.x, _startingOffset.y + Time.time * incrementSpeed);
     }
 }
