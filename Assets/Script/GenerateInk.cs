@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource), typeof(SphereCollider))]
 public class GenerateInk : MonoBehaviour
 {
+    public PlayerHealth health;
     public GameObject Ink;
     private float spawn_cd;
     public float spawn_cd_max;
