@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
         if (health > maxHealth)
             health = maxHealth;
         if (isAlive)
-            health -= .3f;
+            health -= 2f * Time.deltaTime;
         if (health < 0)
         {
             isAlive = false;
