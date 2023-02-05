@@ -20,7 +20,7 @@ public class HealOnCollide : MonoBehaviour
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth>().health += 5;
+            other.gameObject.GetComponent<PlayerHealth>().health += 2;
             //decrease scale
             transform.localScale -= new Vector3(0.025f, 0f, 0.025f);
         }

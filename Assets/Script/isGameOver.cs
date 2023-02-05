@@ -8,7 +8,7 @@ public class isGameOver : MonoBehaviour
     // Start is called before the first frame update
     public CharacterController cam;
     public PlayerHealth health;
-    private Vector3 _initialPos = new Vector3(-0.3f, 3.05f, -5.5f);
+    private Vector3 _initialPos = new Vector3(-0.3f, 1.51f, -5.5f);
     public float speed = 0f;
     public float maxDist = 0f;
     private float _wait = 30f;
@@ -29,16 +29,21 @@ public class isGameOver : MonoBehaviour
             }
             else
             {
-                print(dist * 100 / maxDist > 10);
-                if (dist * 100 / maxDist > 10)
+                if (dist * 100 / maxDist > 30)
                 {
                     cam.Move(new Vector3(0, speed, 0) * Time.deltaTime);
                     speed += 1;
                 }
                 else
                 {
-                    cam.Move(new Vector3(0, speed, -1) * Time.deltaTime);
-                    speed -= 9;
+                    print(dist * 100 / maxDist);
+
+                    cam.Move(new Vector3(0, speed, 0) * Time.deltaTime);
+                    if (camPos.y > _initialPos.y)
+                    {
+                        cam.transform.position = _initialPos;
+                    }
+                    speed -= 1f/7f;
                     if (speed <= 0)
                         speed = 1;
                 }
